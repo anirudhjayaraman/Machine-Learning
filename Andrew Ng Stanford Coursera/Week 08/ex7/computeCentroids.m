@@ -35,10 +35,9 @@ for i = 1:m
         end
     end
 end
-
-centroids(:,1)=centroids(:,1)./counts 
-centroids(:,2)=centroids(:,2)./counts 
-
+for k=1:n
+    centroids(:,k)=centroids(:,k)./counts 
+end
 
 
 % =============================================================
