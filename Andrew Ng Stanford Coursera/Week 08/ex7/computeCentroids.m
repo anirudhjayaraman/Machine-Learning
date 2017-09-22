@@ -14,7 +14,7 @@ function centroids = computeCentroids(X, idx, K)
 [m n] = size(X);
 
 % You need to return the following variables correctly.
-centroids = zeros(K, n);
+centroids = zeros(K, n); 
 
 
 % ====================== YOUR CODE HERE ======================
