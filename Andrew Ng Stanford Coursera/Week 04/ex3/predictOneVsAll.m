@@ -32,8 +32,15 @@ X = [ones(m, 1) X];
 % temp = (X*all_theta');
 % p(:) = max(temp,[],2); 
 
-h_theta = (X * all_theta');
-p = max(h_theta, [], 2);
+%h_theta = (X * all_theta');
+%p = max(h_theta, [], 2);
+
+ pro = X * all_theta';
+ % m * num_labels
+ kind = max(pro, [], 2);
+ for i = 1: m
+     p(i) = find(pro(i,:) == kind(i));
+end
 
 % temp is of dimension 5000x10
 
