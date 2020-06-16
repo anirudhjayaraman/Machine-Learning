@@ -32,7 +32,7 @@ X = [ones(m, 1) X];
 % temp = (X*all_theta');
 % p(:) = max(temp,[],2); 
 
-h_theta = (X * all_theta');
+h_theta = sigmoid(X * all_theta');
 p = max(h_theta, [], 2);
 
 % temp is of dimension 5000x10
